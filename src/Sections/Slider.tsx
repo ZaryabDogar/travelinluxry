@@ -26,7 +26,7 @@ const Slider = () => {
 					slidesPerView={1}
 					autoplay={{
 						delay: 4000,
-						disableOnInteraction: false,
+						disableOnInteraction: true,
 					}}
 					loop={true}
 					data-swiper-autoplay="4000"
