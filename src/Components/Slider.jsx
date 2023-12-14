@@ -28,7 +28,7 @@ const Slider = ({ slides }) => {
 		<div className="slider text-white relative 2xl:h-[502px] xl:h-[420px] lg:h-[320px] md:h-[350px] sm:h-[620px] h-[450px] select-none">
 			<button
 				onClick={prevSlide}
-				className="absolute xl:bottom-10  sm:bottom-10 sm:left-10 -left-4 bottom-48 xl:w-[99px] sm:w-[68px] w-[30px]  "
+				className="absolute xl:bottom-10  sm:-bottom-10 sm:left-10 -left-4 bottom-48 xl:w-[99px] sm:w-[68px] w-[30px]  "
 			>
 				<img
 					src={arrowleft}
