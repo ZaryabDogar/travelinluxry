@@ -6,7 +6,7 @@ import Fotter from '../Sections/Fotter';
 import Ourservices from '../Sections/Ourservices';
 import Rates from '../Sections/Rates';
 import Slider from '../Sections/Slider';
-import Fleet from '../Sections/fleet';
+import Fleet from '../Sections/Fleet';
 const Home = () => {
 	return (
 		<div className="bg-mainbg">
