@@ -1,0 +1,19 @@
+.swiper-pagination-bullet {
+	background-color: #ffffff;
+    padding: 3px;
+    border: 2px solid #ffffff;
+    opacity: 1;
+    width: 7px; /* Set the width of the bullet */
+    height: 7px;
+    /* Set the background color for inactive bullets */
+}
+
+.swiper-pagination-bullet-active {
+    width: 12px; /* Set the width of the bullet */
+    height: 12px; /* Set the height of the bullet */
+    background-color: #CC405D; /* Set the background color for inactive bullets */
+    border: 1px solid #CC405D; /* Set the border color and width */
+    padding: 2px;
+    border-radius: 50%;
+    background-clip: content-box;
+}
