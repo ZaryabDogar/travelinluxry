@@ -12,7 +12,7 @@ const Fleet = () => {
 	const slides = [<Fslide1 key={1} />, <Fslide2 key={2}/>, <Fslide3 key={3}/>,<Fslide4 key={4}/>,<Fslide5 key={5}/>,<Fslide6 key={6}/>,<Fslide7 key={7}/>,<Fslide8 key={8}/>,];
 
 	return (
-		<section className="xl:px-14 sm:px-8 px-4 mt-8">
+		<section className="xl:px-14 sm:px-8 px-4 mt-8" id='fleet'>
 			<div className="bg-[#CC405D] sm:rounded-[32px] rounded-2xl sm:py-14 py-8 px-5 text-white lg:w-fit ">
 				<h1 className="font-Lora xl:text-[52px] lg-[34px] leading-[28px] font-bold text-[32px] sm:pb-4 underline  mx-8 lg:text-start text-center">
 					FLEET

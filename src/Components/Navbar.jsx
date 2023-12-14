@@ -239,6 +239,9 @@ const Navbar = () => {
 									<li className="uppercase">fleet</li>
 								</ScrollLink>
 								<ScrollLink
+								to="fleet"
+								smooth={true}
+								duration={500}
 									onClick={() => {
 										scrollToSection('rates');
 										toggleDropdown();
@@ -247,6 +250,9 @@ const Navbar = () => {
 									<li className="uppercase">Rates</li>
 								</ScrollLink>
 								<ScrollLink
+									to="fleet"
+									smooth={true}
+									duration={500}
 									onClick={() => {
 										scrollToSection('contact');
 										toggleDropdown();

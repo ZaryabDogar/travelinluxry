@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Slide1 from '../Components/Slide1';
 import Slide2 from '../Components/Slide2';
 import S3 from '../Components/S3';
+// Swiper.use([ Pagination, Autoplay]);
 
 const Slider = () => {
 	
@@ -20,14 +21,17 @@ const Slider = () => {
 				{' '}
 				<Swiper
 					pagination={{ clickable: true }}
-					modules={[Pagination]}
+					modules={[Autoplay,Pagination]}
 					spaceBetween={50}
 					slidesPerView={1}
-					autoplay={true}
+					autoplay={{
+						delay: 4000,
+						disableOnInteraction: false,
+					}}
 					loop={true}
-					data-swiper-autoplay="2000"
-					onSlideChange={() => console.log('slide change')}
-					onSwiper={(swiper) => console.log(swiper)}
+					data-swiper-autoplay="4000"
+					
+					
 					className="mySwiper xl:rounded-[32px] md:rounded-[28px] sm:rounded-[24px] rounded-2xl"
 				>	
 					<SwiperSlide>

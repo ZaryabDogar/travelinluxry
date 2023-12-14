@@ -2,7 +2,7 @@
 
 const ContactForm = () => {
   return (
-    <section className="lg:px-12 sm:px-6 px-4">
+    <section className="lg:px-12 sm:px-6 px-4" id="contact">
     <div className="flex flex-col lg:flex-row justify-center bg-[#CC405D0F] rounded-[32px] ">
       {/* text Section */}
       <div className="lg:w-1/2 flex    sm:px-10 px-5  sm:py-16 py-10">
