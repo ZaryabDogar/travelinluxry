@@ -73,9 +73,7 @@ const Navbar = () => {
 						{/* right side  */}
 						<div className="flex  items-center">
 							<ul
-								className={`lg:flex hidden  font-[500] md:text-sm text-[25px] text-navtext font-raleway ${
-									isScrolled ? 'text-black' : 'text-white'
-								}`}
+								className={`lg:flex hidden  font-[500] md:text-sm text-[25px] text-navtext font-raleway `}
 							>
 								<li
 									className={`px-3 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none  uppercase`}
@@ -90,7 +88,7 @@ const Navbar = () => {
 										SERVICES
 									</ScrollLink>
 								</li>
-								<li
+								{/* <li
 									className={` lg:px-3 2xl:px-7 px-2 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
 								>
 									<ScrollLink
@@ -101,7 +99,7 @@ const Navbar = () => {
 									>
 										procedures
 									</ScrollLink>
-								</li>
+								</li> */}
 								<li
 									className={`lg:px-3 2xl:px-7 px-2  py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
 								>
@@ -123,19 +121,7 @@ const Navbar = () => {
 										duration={500}
 										onClick={() => scrollToSection('fleet')}
 									>
-										fleet
-									</ScrollLink>
-								</li>
-								<li
-									className={` lg:px-3 2xl:px-7 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
-								>
-									<ScrollLink
-										to="rates"
-										smooth={true}
-										duration={500}
-										onClick={() => scrollToSection('rates')}
-									>
-										Rates
+										FLEET & RATES
 									</ScrollLink>
 								</li>
 								<li
@@ -151,7 +137,7 @@ const Navbar = () => {
 									</ScrollLink>
 								</li>
 								<li
-									className={` lg:px-3 2xl:px-7 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase font-[700]`}
+									className={` lg:px-3 2xl:px-7 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase `}
 								>
 									<ScrollLink to="/">new booking</ScrollLink>
 								</li>
@@ -205,17 +191,7 @@ const Navbar = () => {
 									{' '}
 									SERVICES
 								</ScrollLink>
-								<ScrollLink
-									to="procedures"
-									smooth={true}
-									duration={500}
-									onClick={() => {
-										scrollToSection('procedures');
-										toggleDropdown();
-									}}
-								>
-									<li className="uppercase">procedures</li>
-								</ScrollLink>
+							
 								<ScrollLink
 									to="about"
 									smooth={true}
@@ -236,19 +212,9 @@ const Navbar = () => {
 										toggleDropdown();
 									}}
 								>
-									<li className="uppercase">fleet</li>
+									<li className="uppercase">FLEET & RATES</li>
 								</ScrollLink>
-								<ScrollLink
-								to="fleet"
-								smooth={true}
-								duration={500}
-									onClick={() => {
-										scrollToSection('rates');
-										toggleDropdown();
-									}}
-								>
-									<li className="uppercase">Rates</li>
-								</ScrollLink>
+								
 								<ScrollLink
 									to="fleet"
 									smooth={true}

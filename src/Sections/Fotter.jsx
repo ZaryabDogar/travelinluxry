@@ -84,11 +84,11 @@ const Fotter = () => {
 					</div>
 				</div>
                 <div className="w-full border-[0.7px] border-white"></div>
-                <div className="py-8 font-Lora text-white flex sm:justify-between sm:items-center lg:flex-row flex-col items-center lg:text-start text-center ">
+                <div className="py-8 font-Lora text-white flex justify-center sm:items-center lg:flex-row flex-col items-center lg:text-start text-center ">
                     <div className="lg:mb-0 mb-5">
-                        <p className="text-[16px] leading-[12.5px]">© 2024 Cullitons Limousine Service Limited. All Rights Reserved</p>
+                        <p className="text-[16px] leading-[20.5px]">© 2024 Cullitons Limousine Service Limited. All Rights Reserved</p>
                     </div>
-                    <div className="flex 2xl:space-x-24 xl:space-x-14 lg:space-x-8 lg:flex-row flex-col items-center lg:text-start text-center lg:space-y-0 space-y-8">
+                    {/* <div className="flex 2xl:space-x-24 xl:space-x-14 lg:space-x-8 lg:flex-row flex-col items-center lg:text-start text-center lg:space-y-0 space-y-8">
                         <div className="">
                         <p className="sm:text-[20px] text-[18px] leading-[25.6px] mb-2">ADDRESS</p>
                         <p className="sm:text-[16px] text-[16px] ">511 McNicoll Ave, Suite 201
@@ -102,7 +102,7 @@ const Fotter = () => {
                         <p className="sm:text-[16px] text-[16px] ">administration@cullitons.com</p>
                         <p className="sm:text-[16px] text-[16px] ">9AM-5PM Monday to Friday</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 			</div>
 		</footer>

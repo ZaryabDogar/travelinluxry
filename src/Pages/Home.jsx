@@ -4,9 +4,9 @@ import Airport from '../Sections/Airport';
 import ContactForm from '../Sections/ContactForm';
 import Fotter from '../Sections/Fotter';
 import Ourservices from '../Sections/Ourservices';
-import Rates from '../Sections/Rates';
 import Slider from '../Sections/Slider';
 import Fleet from '../Sections/Fleet';
+
 const Home = () => {
 	return (
 		<div className="bg-mainbg">
@@ -15,7 +15,6 @@ const Home = () => {
 			<Airport></Airport>
 			<Aboutus></Aboutus>
        <Fleet></Fleet>
-			<Rates></Rates>
 			<ContactForm />
 			<Fotter />
 		</div>

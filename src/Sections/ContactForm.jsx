@@ -1,8 +1,8 @@
-
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const ContactForm = () => {
   return (
-    <section className="lg:px-12 sm:px-6 px-4" id="contact">
+    <section className="lg:px-12 sm:px-6 px-3" id="contact">
     <div className="flex flex-col lg:flex-row justify-center bg-[#CC405D0F] rounded-[32px] ">
       {/* text Section */}
       <div className="lg:w-1/2 flex    sm:px-10 px-5  sm:py-16 py-10">
@@ -104,12 +104,27 @@ const ContactForm = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="flex lg:justify-start items-start justify-center">
+          <div className="flex lg:justify-between sm:items-start sm:justify-evenly  w-full sm:flex-row flex-col items-center space-y-6 sm:space-y-0">
+            <div className=" flex sm:space-x-5 space-x-1">
             <button
               type="submit"
-              className="font-[500] text-major  px-6 py-4 rounded-[10.87px] bg-[#CC405D] text-white"
+              className="font-[500] text-major  sm:px-6 px-2 py-3 rounded-[10.87px] bg-[#CC405D] text-white text-sm"
             >
               Submit
+            </button>
+            <button
+              type="submit"
+              className="font-[500] text-major  xl:px-5 px-1 py-3 rounded-[10.87px]  text-[#CC405D] border text-sm"
+            >
+              Account Application Form
+            </button>
+            
+            </div>
+            <button
+              
+              className="font-[500] text-major  px-6 py-4 rounded-[10.87px] text-[#000000] bg-[#CC405D]"
+            >
+              <FaArrowUpLong className="sm:text-2xl" />
             </button>
           </div>
         </form>

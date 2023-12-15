@@ -9,7 +9,7 @@ const Ourservices = () => {
   return (
 <section className='py-14 px-[15px] text-white' name='service'>
     <div className="flex flex-wrap justify-center">
-        <div className="2xl:w-[45%] lg:w-[48%] lg:text-start text-center font-Lora pl-10 pt-4 pr-6 pb-6">
+        <div className="2xl:w-[45%] lg:w-[48%]  lg:text-start text-center font-Lora pl-10 pt-4 pr-6 pb-6">
             <p className="lg:block hidden  mb-16 font-[500] text-[42px] leading-[28px] mt-8 lg:no-underline "><span className='border-b-[3px] border-[#CC405D] pb-4 '>OUR SE</span>RVICES</p>
             <p className="block lg:hidden mb-16 font-[500] text-[28px] sm:text-[42px] leading-[28px] mt-8 lg:no-underline ">OU<span className='border-b-[3px] border-[#CC405D] pb-4 '>R SERVIC</span>ES</p>
             <p className="text-[16px] leading-[28px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sem non est iaculis convallis. Suspendisse luctus blandit magna, sed molestie nunc semper sit amet. Vivamus ornare iaculis urna, at ullamcorper </p>
