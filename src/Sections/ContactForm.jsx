@@ -1,6 +1,52 @@
 import { FaArrowUpLong } from "react-icons/fa6";
-
+import emailjs from 'emailjs-com';
+import { useRef,useState, useEffect } from "react";
+import {  Link as ScrollLink, scroller } from 'react-scroll';
 const ContactForm = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  const form =useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_y9v8oni', 'template_kto4lxz', form.current, 'ncon6c2iZsZxgekFO')
+      .then((result) => {
+        console.log(result.text);
+        resetForm();
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+  const resetForm = () => {
+    // Reset each form field to an empty value
+    form.current.reset();
+  };
+  const scrollToSection = (section) => {
+		scroller.scrollTo(section, {
+			duration: 800,
+			delay: 0,
+			smooth: 'easeInOutQuart',
+			offset: -50, // Adjust the offset based on your layout
+		});
+	};
+   useEffect(() => {
+    // Add an event listener to track scroll position
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 400;
+      // console.log(window.scrollY)
+      // console.log(scrolled)
+      setShowButton(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Run the effect only once on component mount
+
+  // Rest of your component code
   return (
     <section className="lg:px-12 sm:px-6 px-3" id="contact">
     <div className="flex flex-col lg:flex-row justify-center bg-[#CC405D0F] rounded-[32px] ">
@@ -42,17 +88,18 @@ const ContactForm = () => {
       <div className="lg:w-1/2 pt-10 p-6 flex w-full justify-center">
        
 
-        <form className="font-inter w-full flex flex-col justify-center lg:items-start items-center">
+        <form ref={form} className="font-inter w-full flex flex-col justify-center lg:items-start items-center"  onSubmit={sendEmail}>
           {/* Name Fields */}
 
             <div className="xl:w-[485.38px] w-full max-w-[480px] xl:mb-6 mb-4   ">
-              <label htmlFor="firstName" className="block md:text-[17.4px] text-[16px] leading-[20.1px] xl:mb-6 mb-4 text-white   ">
+              <label htmlFor="name" className="block md:text-[17.4px] text-[16px] leading-[20.1px] xl:mb-6 mb-4 text-white   ">
               Full Name*:
               </label>
               <input
                 type="text"
-                id="firstName"
-                name="firstName"
+                id="Name"
+                name="Name"
+                required
                 className=" lg:p-3.5 p-3 pr-0  border-b-[1px] border-white w-full focus:outline-none rounded-[7.61px]  focus:border-white  md:text-[17.4px] text-[16px] leading-[20.1px]    "
               />
             </div>
@@ -62,13 +109,14 @@ const ContactForm = () => {
           {/* Email and  */}
         <div className="xl:w-[485.38px]    w-full max-w-[480px] xl:mb-6 mb-4  
              ">
-              <label htmlFor="firstName" className="block md:text-[17.4px] text-[16px] leading-[20.1px] xl:mb-6 mb-4 text-white   ">
+              <label htmlFor="email" className="block md:text-[17.4px] text-[16px] leading-[20.1px] xl:mb-6 mb-4 text-white   ">
               Email*:
               </label>
               <input
-                type="text"
-                id="firstName"
-                name="firstName"
+                type="email"
+                id="email"
+                name="email"
+                required
                 className=" lg:p-3.5 p-3 pr-0  border-b-[1px] border-white w-full focus:outline-none rounded-[7.61px]  focus:border-white  md:text-[17.4px] text-[16px] leading-[20.1px]    "
               />
             </div>
@@ -77,13 +125,14 @@ const ContactForm = () => {
         
           <div className=" xl:mb-6  xl:w-[485.38px]  w-full max-w-[480px]   mb-4
              ">
-              <label htmlFor="firstName" className="block md:text-[17.4px] text-[16px] leading-[20.1px] xl:mb-6 mb-4 text-white   ">
+              <label htmlFor="phone" className="block md:text-[17.4px] text-[16px] leading-[20.1px] xl:mb-6 mb-4 text-white   ">
               Phone No*:
               </label>
               <input
-                type="text"
-                id="firstName"
-                name="firstName"
+                type="tel"
+                id="phone_number"
+                name="phone_number"
+                required
                 className=" lg:p-3.5 p-3 pr-0  border-b-[1px] border-white w-full focus:outline-none rounded-[7.61px]  focus:border-white  md:text-[17.4px] text-[16px] leading-[20.1px]    "
               />
             </div>
@@ -113,19 +162,28 @@ const ContactForm = () => {
               Submit
             </button>
             <button
-              type="submit"
-              className="font-[500] text-major  xl:px-5 px-1 py-3 rounded-[10.87px]  text-[#CC405D] border text-sm"
+              type=""
+              className="font-[500] text-major  xl:px-5 px-1 py-3 rounded-[10.87px]  text-[#CC405D] hover:bg-[#CC405D] hover:text-white transition-all duration-300 ease-in border text-sm hover:border-[#CC405D]"
             >
               Account Application Form
             </button>
             
             </div>
-            <button
+            <ScrollLink
+										to="hero"
+										smooth={true}
+										duration={500}
+										onClick={() => scrollToSection('hero')}
+									>
+										{' '}
+										<button
               
-              className="font-[500] text-major  px-6 py-4 rounded-[10.87px] text-[#000000] bg-[#CC405D]"
+              className={`font-[500] text-major  sm:px-6 sm:py-4 sm:rounded-[10.87px] px-2 py-2 rounded-full text-[#000000] bg-[#CC405D] ${showButton?"fixed bottom-5 sm:right-16 right-2":"hidden"} `}
             >
               <FaArrowUpLong className="sm:text-2xl" />
             </button>
+									</ScrollLink>
+            
           </div>
         </form>
       </div>

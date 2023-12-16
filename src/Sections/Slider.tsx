@@ -15,7 +15,7 @@ import S3 from '../Components/S3';
 const Slider = () => {
 	
 	return (
-		<section className="xl:pt-[110px] pt-24">
+		<section className="xl:pt-[110px] pt-24" id='hero'>
 			{/* remove height from here */}
 			<div className="   w-full relative mt- lg:px-12 md:px-8 px-4  bg-mainbg">
 				{' '}

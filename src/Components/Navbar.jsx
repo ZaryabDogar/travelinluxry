@@ -141,6 +141,11 @@ const Navbar = () => {
 								>
 									<ScrollLink to="/">new booking</ScrollLink>
 								</li>
+								<li
+									className={` lg:px-3 2xl:px-7 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase `}
+								>
+									<ScrollLink to="/">Manage booking</ScrollLink>
+								</li>
 							</ul>
 
 							<button
@@ -225,6 +230,9 @@ const Navbar = () => {
 									}}
 								>
 									<li className="uppercase">Contact</li>
+								</ScrollLink>
+								<ScrollLink to="/">
+									<li className={`uppercase font-bold`}>new booking</li>
 								</ScrollLink>
 								<ScrollLink to="/">
 									<li className={`uppercase font-bold`}>new booking</li>
