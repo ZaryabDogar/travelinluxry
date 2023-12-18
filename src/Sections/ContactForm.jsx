@@ -48,8 +48,8 @@ const ContactForm = () => {
 
   // Rest of your component code
   return (
-    <section className="lg:px-12 sm:px-6 px-3" id="contact">
-    <div className="flex flex-col lg:flex-row justify-center bg-[#CC405D0F] rounded-[32px] ">
+    <section className="lg:px-12 sm:px-6 px-3 sm:mb-16 flex  " id="contact">
+    <div className="flex flex-col lg:flex-row justify-center items-center w-full bg-[#CC405D0F] rounded-[32px] ">
       {/* text Section */}
       <div className="lg:w-1/2 flex    sm:px-10 px-5  sm:py-16 py-10">
       <div className="font-Lora text-white lg:text-start text-center">
@@ -178,7 +178,7 @@ const ContactForm = () => {
 										{' '}
 										<button
               
-              className={`font-[500] text-major  sm:px-6 sm:py-4 sm:rounded-[10.87px] px-2 py-2 rounded-full text-[#000000] bg-[#CC405D] ${showButton?"fixed bottom-5 sm:right-16 right-2":"hidden"} `}
+              className={`font-[500] text-major  sm:px-6 sm:py-4 sm:rounded-[10.87px] px-4 py-4 rounded-full text-[#000000] bg-[#CC405D] ${showButton?"fixed bottom-5 sm:right-16 right-2":"hidden"} `}
             >
               <FaArrowUpLong className="sm:text-2xl" />
             </button>

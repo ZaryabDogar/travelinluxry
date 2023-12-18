@@ -37,7 +37,7 @@ const Ourservices = () => {
   `}
 </style>
 
-<div className="flex w-full justify-center">
+<div className="flex w-full justify-center sm:mb-12">
     <div className="flex flex-wrap lg:grid grid-cols-4 justify-center xl:w-[92%]  place-items-center">
         <div className="lg:w-full lg:text-start text-center font-Lora pl-10 pt-4 pr-6 pb-6 col-span-2">
             <p className="lg:block hidden  mb-16 font-[500] text-[42px] leading-[28px] mt-8 lg:no-underline "><span className='border-b-[3px] border-[#CC405D] pb-4 '>OUR SE</span>RVICES</p>

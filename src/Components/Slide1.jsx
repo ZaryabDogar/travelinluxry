@@ -20,7 +20,7 @@ const Slide1 = () => {
 		backgroundImage: `url(${img})`,
 		backgroundSize: 'cover',
 		backgroundPosition: 'top center',
-		// borderRadius: '32px',26px
+		// borderRadius: '50px'
 	};
 	// const gradientStyle = {
 	// 	backgroundImage:

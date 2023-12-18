@@ -12,7 +12,7 @@ const Fleet = () => {
 	const slides = [<Fslide1 key={1} />, <Fslide3 key={3}/>,<Fslide8 key={8}/>, <Fslide5 key={5}/>,<Fslide6 key={6}/>,<Fslide2 key={2}/>,<Fslide4 key={4}/>,<Fslide7 key={7}/>,];
 
 	return (
-		<section className="xl:px-14 sm:px-8 px-3 mt-8 w-full" id='fleet'>
+		<section className="xl:px-14 sm:px-8 px-3 mt-8 w-full mb-12" id='fleet'>
 			<div className="bg-[#CC405D] sm:rounded-[32px] rounded-2xl 2xl:py-12 sm:py-6 py-4 pb-8 sm:pb-8 sm:px-5 px-2 text-white lg:w-fi ">
 			
 				<Slider slides={slides} />

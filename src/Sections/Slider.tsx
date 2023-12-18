@@ -14,7 +14,7 @@ import Slide2 from '../Components/Slide2';
 
 const Slider = () => {
 	return (
-		<section className="xl:pt-[110px] pt-24" id="hero">
+		<section className="xl:pt-[110px] pt-24 sm:mb-12" id="hero">
 			{/* remove height from here */}
 			<div className="   w-full   lg:px-12 md:px-8 px-4  bg-mainbg">
 				{' '}

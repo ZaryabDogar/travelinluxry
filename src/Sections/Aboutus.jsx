@@ -49,7 +49,7 @@ const Aboutus = () => {
 			</div>
 
 			{isModalOpen && (
-				<div className="fixed sm:top-5 top-10 left-0 w-full h-full flex items-center justify-center bg-black bg-[rgba(0,0,0,0.7)] z-40 px-5 overflow-hidden">
+				<div className="fixed sm:top-5 top-10 left-0 w-full h-full flex items-center justify-center bg-black bg-[rgba(0,0,0,0.7)] z-40 px-5 overflow-hidden mb-12">
 					<div className="bg-[#000000] text-white sm:p-8 p-2 xl:max-w-4xl md:max-w-3xl max-2xl:  h-[80vh] text-center rounded-2xl select-none overflow-y-scroll no-scrollbar scrollbar-track">
 						<div className="">
 						<p className="text-[20px] leading-[28px] font-bold text-[#CC405D] mb-4 text-center ">

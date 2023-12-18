@@ -15,7 +15,7 @@ const Airport = () => {
 	};
 
 	return (
-		<div className="h-full w-full sm:px-12 px-4" name='procedures'>
+		<div className="h-full w-full sm:px-12 px-4 sm:mb-12" name='procedures'>
 			<div
 				style={backgroundStyle}
 				className="  xl:rounded-[32px] md:rounded-[28px] sm:rounded-[24px] rounded-2xl w-full flex items-center justify-center py-12"
