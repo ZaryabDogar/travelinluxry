@@ -43,7 +43,7 @@ const Slide2 = () => {
 
 
 					    <div
-      className={`w-full h-full flex justify-center items-center flex-col fixed top-0 left-0  transition-all duration-500 ease-in font-Lora text-white px-4  ${
+      className={`w-full h-full flex justify-center items-center flex-col   transition-all duration-500 ease-in font-Lora text-white px-4  ${
         loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[10%]'
       }`}  
     >
