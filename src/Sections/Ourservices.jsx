@@ -45,32 +45,32 @@ const Ourservices = () => {
             <p className="text-[16px] leading-[28px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sem non est iaculis convallis. Suspendisse luctus blandit magna, sed molestie nunc semper sit amet. Vivamus ornare iaculis urna, at ullamcorper </p>
         </div>
         {/* card1  */}
-        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] sm:w-[230px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4  lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
+        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] lg:w-[242px] sm:w-[233px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4  lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
             <img src={plane} className='sm:w-[93px] sm:h-[93px] w-[80px] h-[80px]' alt="" />
             <p className="font-[500] sm:text-[22px] text-[18px] leading-[28px] text-center">Airport <br />Transfers</p>
         </div>
         {/* card2 */}
-        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] sm:w-[230px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
+        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] lg:w-[242px] sm:w-[233px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
             <img src={building} className='sm:w-[93px] sm:h-[93px]  w-[83px] h-[83px]' alt="" />
             <p className="font-[500] sm:text-[22px] text-[18px] leading-[28px] text-center">Corporate <br />Transportation</p>
         </div>
         {/* card2 */}
-        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] sm:w-[230px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
+        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] lg:w-[242px] sm:w-[233px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
             <img src={city} className='sm:w-[96px] sm:h-[96px]  w-[86px] h-[86px]' alt="" />
             <p className="font-[500] sm:text-[22px] text-[18px] leading-[28px] text-center">City Tours</p>
         </div>
         {/* card2 */}
-        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] sm:w-[230px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
+        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] lg:w-[242px] sm:w-[233px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
             <img src={bus} className='sm:w-[121px] sm:h-[93px]  w-[110px] h-[83px]' alt="" />
             <p className="font-[500] sm:text-[22px] text-[18px] leading-[28px] text-center">Shuttle <br />Transfers</p>
         </div>
         {/* card2 */}
-        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] sm:w-[230px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
+        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] lg:w-[242px] sm:w-[233px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
             <img src={livery} className='sm:w-[98px] sm:h-[96px]  w-[88px] h-[86px]' alt="" />
             <p className="font-[500] sm:text-[22px] text-[18px] leading-[28px] text-center">Livery <br />Service </p>
         </div>
         {/* card2 */}
-        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] sm:w-[230px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
+        <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] lg:w-[242px] sm:w-[233px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4 lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">
             <img src={greet} className='sm:w-[120px] sm:h-[72px]  w-[110px] h-[62px]' alt="" />
             <p className="font-[500] sm:text-[22px] text-[18px] leading-[28px] text-center">Meet & <br />Greet</p>
         </div>
