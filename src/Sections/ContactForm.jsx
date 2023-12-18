@@ -32,7 +32,7 @@ const ContactForm = () => {
    useEffect(() => {
     // Add an event listener to track scroll position
     const handleScroll = () => {
-      const scrolled = window.scrollY > 400;
+      const scrolled = window.scrollY > 450;
       // console.log(window.scrollY)
       // console.log(scrolled)
       setShowButton(scrolled);
@@ -178,7 +178,7 @@ const ContactForm = () => {
 										{' '}
 										<button
               
-              className={`font-[500] text-major  sm:px-6 sm:py-4 sm:rounded-[10.87px] px-4 py-4 rounded-full text-[#000000] bg-[#CC405D] ${showButton?"fixed bottom-5 sm:right-16 right-2":"hidden"} `}
+              className={`font-[500] text-major  sm:px-6 sm:py-4 sm:rounded-[10.87px] px-4 py-4 rounded-full text-[#000000] bg-[#CC405D] ${showButton?"fixed bottom-5 sm:right-6 right-2":"hidden"} `}
             >
               <FaArrowUpLong className="sm:text-2xl" />
             </button>
