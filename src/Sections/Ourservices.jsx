@@ -30,7 +30,7 @@ const Ourservices = () => {
 <style>
   {`
     .service-card img {
-      transition: opacity 1s ease-in-out, width 2s ease-in-out;
+      transition: opacity 1s ease-in-out, width 0.5s ease-in-out;
       opacity: ${isSectionVisible ? 1 : 0};
       width: ${isSectionVisible ? 'fit' : '0'}; /* Adjust the width value based on your design */
     }
