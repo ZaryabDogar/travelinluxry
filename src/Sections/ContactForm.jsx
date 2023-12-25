@@ -2,13 +2,22 @@ import { FaArrowUpLong } from "react-icons/fa6";
 import emailjs from 'emailjs-com';
 import { useRef,useState, useEffect } from "react";
 import {  Link as ScrollLink, scroller } from 'react-scroll';
+import ReCAPTCHA from "react-google-recaptcha";
+
 const ContactForm = () => {
   const [showButton, setShowButton] = useState(false);
-
+  const recaptchaRef = useRef();
   const form =useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    const recaptchaValue = recaptchaRef.current.getValue();
 
+    // Check if reCAPTCHA value exists
+    if (!recaptchaValue) {
+      // Handle the case when reCAPTCHA is not completed
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
     emailjs.sendForm('service_y9v8oni', 'template_kto4lxz', form.current, 'ncon6c2iZsZxgekFO')
       .then((result) => {
         console.log(result.text);
@@ -17,6 +26,7 @@ const ContactForm = () => {
         console.log(error.text);
       });
   };
+ 
   const resetForm = () => {
     // Reset each form field to an empty value
     form.current.reset();
@@ -146,6 +156,7 @@ const ContactForm = () => {
             <textarea
               id="message"
               name="message"
+              required
               rows="6"
               placeholder="Write your message.."
               className="lg:p-3.5 p-3 w-full   border-b-[1px] border-white  focus:outline-none focus:border-white rounded-[7.61px] md:text-[17.4px] text-[16px] leading-[20.1px]    "
@@ -154,7 +165,9 @@ const ContactForm = () => {
 
           {/* Submit Button */}
           <div className="flex lg:justify-between sm:items-start sm:justify-evenly  w-full sm:flex-row flex-col items-center space-y-6 sm:space-y-0">
-            <div className=" flex sm:space-x-5 space-x-1">
+            <div className=" flex sm:space-x-5 space-x-1"> 
+            
+         
             <button
               type="submit"
               className="font-[500] text-major  sm:px-6 px-2 py-3 rounded-[10.87px] bg-[#CC405D] text-white text-sm"
@@ -169,6 +182,7 @@ const ContactForm = () => {
             </button>
             
             </div>
+           
             <ScrollLink
 										to="hero"
 										smooth={true}
@@ -185,6 +199,14 @@ const ContactForm = () => {
 									</ScrollLink>
             
           </div>
+          <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          // size="invisible"
+          // onChange={handleRecaptcha}
+          // onErrored={() => console.log("reCAPTCHA error")}
+          className="mt-5"
+        />
         </form>
       </div>
     </div>

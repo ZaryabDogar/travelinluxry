@@ -17,17 +17,27 @@ const Navbar = () => {
 	//   navbar color
 	const [isScrolled, setIsScrolled] = useState(false);
 
-	// Function to handle scroll events
-	const handleScroll = () => {
-		// Check if the user has scrolled beyond a certain point (you can adjust this value)
-		const scrollY = window.scrollY;
-		if (scrollY > 100) {
-			setIsScrolled(true);
-		} else {
-			setIsScrolled(false);
-		}
-	};
+	  // Active section state
+	  const [activeSection, setActiveSection] = useState('');
 
+	  // Function to handle scroll events
+	  const handleScroll = () => {
+		const scrollY = window.scrollY;
+	
+		// Check the visibility of each section and update the active section
+		const sections = ['hero','service-section', 'about', 'fleet', 'contact'];
+		sections.forEach((section) => {
+			// console.log(section)
+		  const element = document.getElementById(section);
+		  if (element && element.offsetTop <= scrollY + 500 && element.offsetTop + element.offsetHeight > scrollY + 60) {
+			setActiveSection(section);
+			// console.log(section)
+		  }
+		});
+	
+		// Update isScrolled state
+		setIsScrolled(scrollY > 100);
+	  };
 	// Effect to add scroll event listener
 	useEffect(() => {
 		// Add event listener when component mounts
@@ -58,14 +68,18 @@ const Navbar = () => {
 					<div className=" flex flex-wrap items-center justify-between mx-auto  ">
 						{/* leftsidew */}
 						<div className="flex justify-start items-center  ">
-							<ScrollLink to="/">
+							<ScrollLink 		to="hero"
+										smooth={true}
+										duration={500}
+										onClick={() => scrollToSection('hero')}>
 								<img
 									src="/logo.png"
 									className={` transition-all  ease-in-out duration-300 ${
 										isScrolled
 											? '2xl:w-[200px] xl:w-[180px] lg:w-[150px] w-[140px]'
 											: '2xl:w-[239px] xl:[220px] lg:w-[190px] w-[160px]'
-									}`}
+									}  ${
+										activeSection === 'hero' ? '' : ''}`}
 									alt=""
 								/>
 							</ScrollLink>
@@ -76,7 +90,8 @@ const Navbar = () => {
 								className={`lg:flex hidden  font-[500] md:text-sm text-[25px] text-navtext font-raleway `}
 							>
 								<li
-									className={`px-3 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none  uppercase`}
+									className={`px-3 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none  uppercase ${
+										activeSection === 'service-section' ? 'font-bold' : ''}`}
 								>
 									<ScrollLink
 										to="service"
@@ -89,7 +104,7 @@ const Navbar = () => {
 									</ScrollLink>
 								</li>
 								{/* <li
-									className={` lg:px-3 2xl:px-7 px-2 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
+									className={` lg:px-3 2xl:px-4 px-2 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
 								>
 									<ScrollLink
 										to="procedures"
@@ -101,7 +116,8 @@ const Navbar = () => {
 									</ScrollLink>
 								</li> */}
 								<li
-									className={`lg:px-3 2xl:px-7 px-2  py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
+									className={`lg:px-3 2xl:px-4 px-2  py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase  ${
+										activeSection === 'about' ? 'font-bold' : ''}`}
 								>
 									<ScrollLink
 										to="about"
@@ -113,7 +129,8 @@ const Navbar = () => {
 									</ScrollLink>
 								</li>
 								<li
-									className={` lg:px-3 2xl:px-7 px-2 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
+									className={` lg:px-3 2xl:px-4 px-2 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase ${
+										activeSection === 'fleet' ? 'font-bold' : ''}`}
 								>
 									<ScrollLink
 										to="fleet"
@@ -125,7 +142,8 @@ const Navbar = () => {
 									</ScrollLink>
 								</li>
 								<li
-									className={` lg:px-3 2xl:px-7 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase`}
+									className={` lg:px-3 2xl:px-4 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase ${
+										activeSection === 'contact' ? 'font-bold' : ''}`}
 								>
 									<ScrollLink
 										to="contact"
@@ -137,12 +155,12 @@ const Navbar = () => {
 									</ScrollLink>
 								</li>
 								<li
-									className={` lg:px-3 2xl:px-7 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase `}
+									className={` lg:px-3 2xl:px-4 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase font-bold`}
 								>
-									<ScrollLink to="/">new booking</ScrollLink>
+									<ScrollLink to="/">New Bookings </ScrollLink>
 								</li>
 								<li
-									className={` lg:px-3 2xl:px-7 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase `}
+									className={` lg:px-3 2xl:px-4 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase font-bold`}
 								>
 									<ScrollLink to="/">Manage booking</ScrollLink>
 								</li>

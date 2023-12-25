@@ -1,6 +1,7 @@
 import React from 'react';
 import { Element, Link as ScrollLink, scroller } from 'react-scroll';
 import flogo from '../assets/foterlogo.png';
+import mlogo from '../assets/flogo.png'
 const Fotter = () => {
 	const scrollToSection = (section) => {
 		scroller.scrollTo(section, {
@@ -16,8 +17,9 @@ const Fotter = () => {
 				<div className="flex sm:justify-between sm:items-center sm:flex-row flex-col items-center sm:text-start text-center pb-10">
 					<div className="flex flex-col space-y-12 py-8 sm:mb-0 mb-10">
 						<img
-							src="/logo.png"
+							src={mlogo}
 							className={` transition-all  ease-in-out duration-300 2xl:w-[328px] xl:[300px] lg:w-[200px] w-[200px]`}
+							
 						/>
 						<img
 							src={flogo}
@@ -25,7 +27,7 @@ const Fotter = () => {
 						/>
 					</div>
 					<div className="font-raleway text-white 2xl:pr-24">
-						<p className="font-[500] sm:text-[32px] text-[25px] leading-[37.57px] text-[#CC405D] sm:pb-10 pb-8">
+						<p className="font-[500] sm:text-[32px] text-[25px] leading-[37.57px] text-[#CC405D] sm:pb-8 pb-8">
 							Quick Links
 						</p>
 						<ul
@@ -72,12 +74,36 @@ const Fotter = () => {
 								className={`  xl:text-[18px] lg:text-[14px] text-[14px] cursor-pointer select-none capitalize`}
 							>
 								<ScrollLink
-									to="New Bookimgs"
+									to="New Bookings "
 									smooth={true}
 									duration={500}
-									onClick={() => scrollToSection('procedures')}
+									onClick={() => scrollToSection('New Bookings ')}
 								>
-									New Bookimgs
+									New Bookings 
+								</ScrollLink>
+							</li>
+							<li
+								className={`  xl:text-[18px] lg:text-[14px] text-[14px] cursor-pointer select-none capitalize`}
+							>
+								<ScrollLink
+									to="Manage Booking"
+									smooth={true}
+									duration={500}
+									onClick={() => scrollToSection('Manage Booking')}
+								>
+									Manage Booking
+								</ScrollLink>
+							</li>
+							<li
+								className={`  xl:text-[18px] lg:text-[14px] text-[14px] cursor-pointer select-none capitalize`}
+							>
+								<ScrollLink
+									to="Account Application Form"
+									smooth={true}
+									duration={500}
+									onClick={() => scrollToSection('Account Application Form')}
+								>
+									Account Application Form
 								</ScrollLink>
 							</li>
 						</ul>

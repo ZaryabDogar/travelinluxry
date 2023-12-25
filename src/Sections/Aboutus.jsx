@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import about from '../../public/about11.png';
 import about2 from '../assets/about2.gif';
-
+import { RxCross2 } from "react-icons/rx";
 const Aboutus = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -14,24 +14,19 @@ const Aboutus = () => {
 	};
 
 	return (
-		<section className="sm:px-16 px-4 py-8" name="about">
+		<section className="sm:px-16 px-4 py-8" name="about" id='about'>
 			<div className="flex justify-between items-center lg:flex-row flex-col text-white font-Lora lg:space-x-5">
-				<div className="lg:w-[45%] max-w-3xl lg:text-start text-center">
+				<div className=" xl:w-[55%] lg:w-[80%] max-w-3xl lg:text-start text-center">
 					<p className="block mb-16 font-[500] text-[42px] leading-[28px] mt-8 lg:no-underline">
 						<span className="border-b-[3px] border-[#CC405D] pb-4 ">
 							ABOUT{' '}
 						</span>
 						US
 					</p>
-					<p className="text-[16px] leading-[28px] font-normal mb-6">
-						Cullitons offers the world's oldest and most trusted limousine
-						services in Toronto, Ontario. Our clientele encompasses an array of
-						people from King George VI and Queen Elizabeth, in 1939, to
-						present-day executives, we treat all our clients as dignitaries. We
-						have been providing the city of Toronto executive limousine service
-						since 1918. We believe our success lies with our continual strive to
-						not only maintain but to exceed the strict standards our clients
-						place on us.
+					<p className="text-[17px] leading-[28px] font-normal mb-6">
+					At Cullitons Limousine, our journey began in 1918, shaping a legacy built on a century of dedication to precision, professionalism, and unwavering client-centric service. Over the years, we've seamlessly transitioned through transformative ownership, evolving into a second-generation family-owned enterprise with a commitment to innovation, adaptability, and the pursuit of excellence.
+Today, Cullitons stands as one of North America's most respected transportation firms, recognized for unparalleled service to corporate clientele globally. With a dedicated team of professionals and a fleet that exemplifies sophistication and reliability, Cullitons Limousine is more than a transportation provider – we are your strategic partner, ensuring seamless, efficient, and tailored solutions for every journey.
+Welcome to a century of excellence. Welcome to Cullitons Limousine.
 					</p>
 					<p className="text-[22px] leading-[28px] font-bold text-[#CC405D] mb-10">
 						<span className="border-b-2 cursor-pointer" onClick={openModal}>
@@ -49,9 +44,17 @@ const Aboutus = () => {
 			</div>
 
 			{isModalOpen && (
-				<div className="fixed sm:top-5 top-10 left-0 w-full h-full flex items-center justify-center bg-black bg-[rgba(0,0,0,0.7)] z-40 px-5 overflow-hidden mb-12">
-					<div className="bg-[#000000] text-white sm:p-8 p-2 xl:max-w-4xl md:max-w-3xl max-2xl:  h-[80vh] text-center rounded-2xl select-none overflow-y-scroll no-scrollbar scrollbar-track">
+				<div className="">
+				<div className="fixed sm:top-5 top-10 left-0 w-full h-full flex items-center justify-center bg-black bg-[rgba(0,0,0,0.7)] z-10 px-5 overflow-hidden mb-12" onClick={closeModal}>
+					
+				</div><div className="bg-[#000000] text-white sm:p-8 p-2 xl:max-w-4xl md:max-w-3xl w-[90%]  h-[80vh] text-center rounded-2xl select-none overflow-y-scroll no-scrollbar scrollbar-track z-30 fixed sm:top-24 top-10 left-[50%] -translate-x-[50%] ">
 						<div className="">
+						<button
+          className=" bg-[#CC405D] text-white px-2 py-2 rounded-full float-right "
+          onClick={closeModal}
+        >
+          <RxCross2 />
+        </button>
 						<p className="text-[20px] leading-[28px] font-bold text-[#CC405D] mb-4 text-center ">
 							OUR HISTORY
 						</p>
@@ -68,8 +71,8 @@ const Aboutus = () => {
 							to the best of it. As he grew to manhood, Frederick worked around
 							St. Michael's with his father's successor, Patrick Crean, a cousin
 							from Ireland. Fredrick toiled as a stone mason, a grave digger,
-							church sexton and of course, a livery driver. By the end of World
-							War One, cars were quickly replacing the horse and carriage as the
+							church sexton and of course, a livery driver. <br /> <span className='font-semibold'>By the end of World War One</span>
+							, cars were quickly replacing the horse and carriage as the
 							mode of transportation. At age 37, Frederick Culliton had his foot
 							in the door of the limousine industry, having worked as a driver
 							for a Toronto livery service. In 1918, opportunity was knocking
@@ -91,8 +94,7 @@ const Aboutus = () => {
 						>
 							Close
 						</button>
-					</div>
-				</div>
+					</div></div>
 			)}
 		</section>
 	);

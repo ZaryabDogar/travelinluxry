@@ -40,9 +40,9 @@ const Ourservices = () => {
 <div className="flex w-full justify-center sm:mb-12">
     <div className="flex flex-wrap lg:grid grid-cols-4 justify-center xl:w-[92%]  place-items-center">
         <div className="lg:w-full lg:text-start text-center font-Lora 2xl:pl-10 xl:pl-3 lg:pl-8 pl-0 pt-4 lg:pr-6 pb-6 col-span-2">
-            <p className="lg:block hidden  mb-16 font-[500] text-[42px] leading-[28px] mt-8 lg:no-underline "><span className='border-b-[3px] border-[#CC405D] pb-4 '>OUR SE</span>RVICES</p>
+            <p className="lg:block hidden  mb-12 font-[500] text-[42px] leading-[28px] mt-8 lg:no-underline "><span className='border-b-[3px] border-[#CC405D] pb-4 '>OUR SE</span>RVICES</p>
             <p className="block lg:hidden mb-16 font-[500] text-[28px] sm:text-[42px] leading-[28px] mt-8 lg:no-underline ">OU<span className='border-b-[3px] border-[#CC405D] pb-4 '>R SERVIC</span>ES</p>
-            <p className="text-[16px] leading-[28px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sem non est iaculis convallis. Suspendisse luctus blandit magna, sed molestie nunc semper sit amet. Vivamus ornare iaculis urna, at ullamcorper </p>
+            <p className="text-[16px] leading-[28px]">Step into the world of Cullitons Limousine, where a century-long legacy stands as a testament to our unwavering commitment. We take pride in delivering an array of premium services meticulously crafted to suit your individual needs. Immerse yourself in the epitome of sophistication, reliability, and a client-centric approach as you explore the unparalleled offerings that define our legacy.</p>
         </div>
         {/* card1  */}
         <div className="bg-[#CC405D0F] flex flex-col justify-center items-center 2xl:w-[302px] xl:w-[280px] lg:w-[238px] sm:w-[233px] w-[302px] h-[275px] rounded-[32px] font-raleway space-y-4  lg:ml-0 2xl:mx-0 sm:mx-2 mx-1 2xl:my-2 my-2 service-card">

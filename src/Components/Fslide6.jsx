@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { IoTimeOutline } from 'react-icons/io5';
 import { SlPlane } from 'react-icons/sl';
 import { TbCurrencyDollar } from 'react-icons/tb';
@@ -7,7 +7,19 @@ import int1 from '../assets/int1.png';
 import int2 from '../assets/int2.png';
 import int3 from '../assets/int3.png';
 import map from '../assets/map.pdf';
+import Imagemodal from './Imagemodal';
 const Fslide6 = () => {
+	const [selectedImage, setSelectedImage] = useState(null);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const openModal = (imageSource) => {
+		setSelectedImage(imageSource);
+		setIsModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setSelectedImage(null);
+		setIsModalOpen(false);
+	};
 	return (
 		<div className="w-full">
 			<div className="flex lg:justify-between lg:flex-row flex-col items-center">
@@ -21,23 +33,29 @@ const Fslide6 = () => {
 					</h1>
 				</div>
 				<div className="lg:flex hidden xl:space-x-5 lg:space-x-2  space-x-3 2xl:pr-14 justify-center my-3">
-					<img
+				<img
 						src={int1}
 						className="2xl:w-[210px] xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
 						alt=""
+						onClick={() => openModal(int1)}
 					/>
 					<img
 						src={int2}
 						className="2xl:w-[210px] xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
 						alt=""
+						onClick={() => openModal(int2)}
 					/>
 					<img
 						src={int3}
 						className="2xl:w-[210px] xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
 						alt=""
+						onClick={() => openModal(int3)}
 					/>
 				</div>
 			</div>
+			{isModalOpen && (
+				<Imagemodal imageSource={selectedImage} closeModal={closeModal} />
+			)}
 			<div className="2xl:pt-12 pt-3 w-full font-raleway sm:px-6 flex relative md:flex-row md:justify-between flex-col md:items-start items-center">
 				<div>
 					<div className="2xl:mb-6 mb-3">
