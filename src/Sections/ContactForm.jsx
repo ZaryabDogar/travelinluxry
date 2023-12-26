@@ -151,7 +151,7 @@ const ContactForm = () => {
           {/* Message Field */}
           <div className=" mb-8 xl:w-[476px]  w-full max-w-[480px]  ">
             <label htmlFor="message" className="block md:text-[17.4px] text-[16px] leading-[20.1px] xl:mb-6 mb-4 text-white    ">
-            Message:
+            Message*:
             </label>
             <textarea
               id="message"

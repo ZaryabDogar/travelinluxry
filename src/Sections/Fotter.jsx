@@ -1,6 +1,9 @@
 import React from 'react';
 import { Element, Link as ScrollLink, scroller } from 'react-scroll';
-import flogo from '../assets/foterlogo.png';
+import flogo1 from '../assets/foterlogo1.png';
+import flogo2 from '../assets/fotterlogo2.jpg';
+import flogo3 from '../assets/foterlogo3.png';
+import flogo4 from '../assets/foterlogo4.png';
 import mlogo from '../assets/flogo.png'
 const Fotter = () => {
 	const scrollToSection = (section) => {
@@ -15,16 +18,31 @@ const Fotter = () => {
 		<footer className="lg:pt-20 pt-14">
 			<div className="lg:px-12 sm:px-8 px-4">
 				<div className="flex sm:justify-between sm:items-center sm:flex-row flex-col items-center sm:text-start text-center pb-10">
-					<div className="flex flex-col space-y-12 py-8 sm:mb-0 mb-10">
+					<div className="flex flex-col space-y-12 py-8 sm:mb-0 mb-10 sm:items-start items-center">
 						<img
 							src={mlogo}
 							className={` transition-all  ease-in-out duration-300 2xl:w-[328px] xl:[300px] lg:w-[200px] w-[200px]`}
 							
 						/>
+						<div className="flex space-x-4">
 						<img
-							src={flogo}
-							className={` transition-all  ease-in-out duration-300 2xl:w-[468px] xl:[400px] lg:w-[350px] w-[250px]`}
+							src={flogo1}
+							className={` transition-all  ease-in-out duration-300 2xl:w-[117px] xl:[100px] lg:w-[87.5px] w-[62.5px] `}
 						/>
+						<img
+							src={flogo2}
+							className={` transition-all  ease-in-out duration-300 2xl:w-[117px] xl:[100px] lg:w-[87.5px] w-[62.5px] `}
+						/>
+						<img
+							src={flogo3}
+							className={` transition-all  ease-in-out duration-300 2xl:w-[117px] xl:[100px] lg:w-[87.5px] w-[62.5px] `}
+						/>
+						<img
+							src={flogo4}
+							className={` transition-all  ease-in-out duration-300 2xl:w-[117px] xl:[100px] lg:w-[87.5px] w-[62.5px] `}
+						/>
+						
+						</div>
 					</div>
 					<div className="font-raleway text-white 2xl:pr-24">
 						<p className="font-[500] sm:text-[32px] text-[25px] leading-[37.57px] text-[#CC405D] sm:pb-8 pb-8">
