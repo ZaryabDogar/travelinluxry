@@ -35,19 +35,19 @@ const Fslide8 = () => {
 				<div className="lg:flex hidden xl:space-x-5 lg:space-x-2  space-x-3 2xl:pr-14 justify-center my-3">
 				<img
 						src={int1}
-						className="2xl:w-[210px] xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
+						className="2xl:w-[210px] bg-white xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
 						alt=""
 						onClick={() => openModal(int1)}
 					/>
 					<img
 						src={int2}
-						className="2xl:w-[210px] xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
+						className="2xl:w-[210px] bg-white xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
 						alt=""
 						onClick={() => openModal(int2)}
 					/>
 					<img
 						src={int3}
-						className="2xl:w-[210px] xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
+						className="2xl:w-[210px] bg-white xl:h-auto lg:w-[180px] lg:h-[140px] w-[30%]"
 						alt=""
 						onClick={() => openModal(int3)}
 					/>

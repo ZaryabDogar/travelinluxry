@@ -68,7 +68,7 @@ const ContactForm = () => {
 	// Rest of your component code
 
 	const openNewTab = () => {
-		window.open('https://newaccapplicationforum.netlify.app/', '_blank');
+		window.open('https://newaccapplicationform.netlify.app//', '_blank');
 	};
 
 	return (
