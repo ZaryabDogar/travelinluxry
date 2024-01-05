@@ -9,7 +9,7 @@ import Fslide6 from '../Components/Fslide6';
 import Fslide7 from '../Components/Fslide7';
 import Fslide8 from '../Components/Fslide8';
 const Fleet = () => {
-	const slides = [<Fslide1 key={1} />, <Fslide3 key={3}/>,<Fslide8 key={8}/>, <Fslide5 key={5}/>,<Fslide6 key={6}/>,<Fslide2 key={2}/>,<Fslide4 key={4}/>,<Fslide7 key={7}/>,];
+	const slides = [ <Fslide5 key={5}/>,<Fslide8 key={8}/>,<Fslide6 key={6}/>,<Fslide1 key={1} />, <Fslide3 key={3}/>,<Fslide2 key={2}/>,<Fslide4 key={4}/>,<Fslide7 key={7}/>,];
 
 	return (
 		<section className="xl:px-14 sm:px-8 px-3 mt-8 w-full mb-12" id='fleet'>

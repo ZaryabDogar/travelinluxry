@@ -3,9 +3,9 @@ import { IoTimeOutline } from 'react-icons/io5';
 import { SlPlane } from 'react-icons/sl';
 import { TbCurrencyDollar } from 'react-icons/tb';
 import pass from '../assets/6passv.png';
-import int1 from '../assets/int1.png';
-import int2 from '../assets/int2.png';
-import int3 from '../assets/int3.png';
+import int1 from '../assets/6passv/interior1.png';
+import int2 from '../assets/6passv/interior2.png';
+import int3 from '../assets/6passv/6pass.png';
 import map from '../assets/map.pdf';
 import Imagemodal from './Imagemodal';
 const Fslide6 = () => {

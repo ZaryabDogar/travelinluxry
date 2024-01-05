@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
 
 import { Element, Link as ScrollLink, scroller } from 'react-scroll'; // Import ScrollLink and scroller
-
 const Navbar = () => {
 	//history
 	// const history = useHistory();
@@ -17,27 +16,31 @@ const Navbar = () => {
 	//   navbar color
 	const [isScrolled, setIsScrolled] = useState(false);
 
-	  // Active section state
-	  const [activeSection, setActiveSection] = useState('');
+	// Active section state
+	const [activeSection, setActiveSection] = useState('');
 
-	  // Function to handle scroll events
-	  const handleScroll = () => {
+	// Function to handle scroll events
+	const handleScroll = () => {
 		const scrollY = window.scrollY;
-	
+
 		// Check the visibility of each section and update the active section
-		const sections = ['hero','service-section', 'about', 'fleet', 'contact'];
+		const sections = ['hero', 'service-section', 'about', 'fleet', 'contact'];
 		sections.forEach((section) => {
 			// console.log(section)
-		  const element = document.getElementById(section);
-		  if (element && element.offsetTop <= scrollY + 500 && element.offsetTop + element.offsetHeight > scrollY + 60) {
-			setActiveSection(section);
-			// console.log(section)
-		  }
+			const element = document.getElementById(section);
+			if (
+				element &&
+				element.offsetTop <= scrollY + 500 &&
+				element.offsetTop + element.offsetHeight > scrollY + 60
+			) {
+				setActiveSection(section);
+				// console.log(section)
+			}
 		});
-	
+
 		// Update isScrolled state
 		setIsScrolled(scrollY > 100);
-	  };
+	};
 	// Effect to add scroll event listener
 	useEffect(() => {
 		// Add event listener when component mounts
@@ -68,18 +71,19 @@ const Navbar = () => {
 					<div className=" flex flex-wrap items-center justify-between mx-auto  ">
 						{/* leftsidew */}
 						<div className="flex justify-start items-center  ">
-							<ScrollLink 		to="hero"
-										smooth={true}
-										duration={500}
-										onClick={() => scrollToSection('hero')}>
+							<ScrollLink
+								to="hero"
+								smooth={true}
+								duration={500}
+								onClick={() => scrollToSection('hero')}
+							>
 								<img
 									src="/logo.png"
 									className={` transition-all  ease-in-out duration-300 ${
 										isScrolled
 											? '2xl:w-[200px] xl:w-[180px] lg:w-[150px] w-[140px]'
 											: '2xl:w-[239px] xl:[220px] lg:w-[190px] w-[160px]'
-									}  ${
-										activeSection === 'hero' ? '' : ''}`}
+									}  ${activeSection === 'hero' ? '' : ''}`}
 									alt=""
 								/>
 							</ScrollLink>
@@ -91,7 +95,8 @@ const Navbar = () => {
 							>
 								<li
 									className={`px-3 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none  uppercase ${
-										activeSection === 'service-section' ? 'font-bold' : ''}`}
+										activeSection === 'service-section' ? 'font-bold' : ''
+									}`}
 								>
 									<ScrollLink
 										to="service"
@@ -117,7 +122,8 @@ const Navbar = () => {
 								</li> */}
 								<li
 									className={`lg:px-3 2xl:px-4 px-2  py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase  ${
-										activeSection === 'about' ? 'font-bold' : ''}`}
+										activeSection === 'about' ? 'font-bold' : ''
+									}`}
 								>
 									<ScrollLink
 										to="about"
@@ -130,7 +136,8 @@ const Navbar = () => {
 								</li>
 								<li
 									className={` lg:px-3 2xl:px-4 px-2 py-1 xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase ${
-										activeSection === 'fleet' ? 'font-bold' : ''}`}
+										activeSection === 'fleet' ? 'font-bold' : ''
+									}`}
 								>
 									<ScrollLink
 										to="fleet"
@@ -143,7 +150,8 @@ const Navbar = () => {
 								</li>
 								<li
 									className={` lg:px-3 2xl:px-4 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase ${
-										activeSection === 'contact' ? 'font-bold' : ''}`}
+										activeSection === 'contact' ? 'font-bold' : ''
+									}`}
 								>
 									<ScrollLink
 										to="contact"
@@ -157,12 +165,24 @@ const Navbar = () => {
 								<li
 									className={` lg:px-3 2xl:px-4 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase font-bold`}
 								>
-									<ScrollLink to="/">New Bookings </ScrollLink>
+									<a
+										href="https://cullitons.com/Cullitons-Online-Booking.html"
+										target="_blank"
+										rel="noreferrer"
+									>
+										New Bookings
+									</a>
 								</li>
 								<li
 									className={` lg:px-3 2xl:px-4 px-2 py-1  xl:text-[18px] lg:text-[14px] text-[12px] cursor-pointer select-none uppercase font-bold`}
 								>
-									<ScrollLink to="/">Manage booking</ScrollLink>
+								<a
+										href="https://cullitons.limoconnect247.net/managebooking/#login"
+										target="_blank"
+										rel="noreferrer"
+									>
+										Manage booking
+									</a>
 								</li>
 							</ul>
 
@@ -214,7 +234,7 @@ const Navbar = () => {
 									{' '}
 									SERVICES
 								</ScrollLink>
-							
+
 								<ScrollLink
 									to="about"
 									smooth={true}
@@ -237,7 +257,7 @@ const Navbar = () => {
 								>
 									<li className="uppercase">FLEET & RATES</li>
 								</ScrollLink>
-								
+
 								<ScrollLink
 									to="fleet"
 									smooth={true}
@@ -249,12 +269,38 @@ const Navbar = () => {
 								>
 									<li className="uppercase">Contact</li>
 								</ScrollLink>
-								<ScrollLink to="/">
-									<li className={`uppercase font-bold`}>new booking</li>
-								</ScrollLink>
-								<ScrollLink to="/">
-									<li className={`uppercase font-bold`}>Manage booking</li>
-								</ScrollLink>
+
+								<li
+									className={`uppercase font-bold`}
+									onClick={() => {
+										toggleDropdown();
+									}}
+								>
+									{' '}
+									<a
+										href="https://cullitons.com/Cullitons-Online-Booking.html"
+										target="_blank"
+										rel="noreferrer"
+									>
+										New Bookings
+									</a>
+								</li>
+
+								<li
+									className={`uppercase font-bold`}
+									onClick={() => {
+										toggleDropdown();
+									}}
+								>
+									{' '}
+									<a
+										href="https://cullitons.limoconnect247.net/managebooking/#login"
+										target="_blank"
+										rel="noreferrer"
+									>
+										Manage booking
+									</a>
+								</li>
 							</ul>
 							{/* buttons */}
 						</div>

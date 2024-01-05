@@ -66,6 +66,11 @@ const ContactForm = () => {
 	}, []); // Run the effect only once on component mount
 
 	// Rest of your component code
+
+	const openNewTab = () => {
+		window.open('https://newaccapplicationforum.netlify.app/', '_blank');
+	};
+
 	return (
 		<section className="lg:px-12 sm:px-6 px-3 sm:mb-16 flex  " id="contact">
 			<div className="flex flex-col lg:flex-row justify-center items-center w-full bg-[#CC405D0F] rounded-[32px] ">
@@ -224,8 +229,9 @@ const ContactForm = () => {
 									Submit
 								</button>
 								<button
-									type=""
+									type="button"
 									className="font-[500] text-major  xl:px-5 px-1 py-3 rounded-[10.87px]  text-[#CC405D] hover:bg-[#CC405D] hover:text-white transition-all duration-300 ease-in border text-sm hover:border-[#CC405D]"
+									onClick={openNewTab}
 								>
 									Account Application Form
 								</button>

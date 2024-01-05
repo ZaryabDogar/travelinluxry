@@ -2,9 +2,9 @@ import React,{useState} from 'react';
 import { IoCall, IoTimeOutline } from 'react-icons/io5';
 import { TbCurrencyDollar } from 'react-icons/tb';
 import pass from '../assets/55pass.png';
-import int1 from '../assets/int1.png';
-import int2 from '../assets/int2.png';
-import int3 from '../assets/int3.png';
+import int1 from '../assets/55pass/interior1.png';
+import int2 from '../assets/55pass/interior2.png';
+import int3 from '../assets/55pass/55pass.png';
 import map from '../assets/map.pdf';
 import Imagemodal from './Imagemodal';
 const Fslide2 = () => {
@@ -24,7 +24,7 @@ const Fslide2 = () => {
 			<div className="flex lg:justify-between lg:flex-row flex-col items-center">
 				<div className="">
 					<p className="sm:block hidden font-Lora xl:text-[18.14px] lg-[34px] leading-[28px] text-[16px] sm:pb-4  mx-8 lg:text-start text-center">
-						55PASSENGER HIGHWAY COACH
+						55 PASSENGER HIGHWAY COACH
 					</p>
 					<h1 className="font-Lora xl:text-[52px] lg-[34px] leading-[28px] font-bold sm:text-[32px] text-[20px] sm:pb-4  mx-8 lg:text-start text-center  lg:no-underline underline">
 						<span className="lg:border-b-4 lg:border-white pb-2">FLEET &</span>{' '}

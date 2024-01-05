@@ -2,9 +2,9 @@ import React,{useState} from 'react';
 import { IoCall, IoTimeOutline } from 'react-icons/io5';
 import { TbCurrencyDollar } from 'react-icons/tb';
 import pass from '../assets/32pass.png';
-import int1 from '../assets/int1.png';
-import int2 from '../assets/int2.png';
-import int3 from '../assets/int3.png';
+import int1 from '../assets/32pass/interior1.png';
+import int2 from '../assets/22pass/interior2.png';
+import int3 from '../assets/22pass/22pass.png';
 import map from '../assets/map.pdf';
 import Imagemodal from './Imagemodal';
 const Fslide4 = () => {
@@ -55,7 +55,7 @@ const Fslide4 = () => {
 			{isModalOpen && (
 				<Imagemodal imageSource={selectedImage} closeModal={closeModal} />
 			)}
-			<div className="2xl:pt-12 lg:pt-0 pt-3 w-full font-raleway sm:px-6 flex relative md:flex-row md:justify-between flex-col md:items-start items-center">
+			<div className="2xl:pt-12  pt-3 w-full font-raleway sm:px-6 flex relative md:flex-row md:justify-between flex-col md:items-start items-center">
 				<div>
 					<div className="2xl:mb-6 mb-3">
 						<div className="flex items-center space-x-5 font-bold">

@@ -91,26 +91,24 @@ const Fotter = () => {
 							<li
 								className={`  xl:text-[18px] lg:text-[14px] text-[14px] cursor-pointer select-none capitalize`}
 							>
-								<ScrollLink
-									to="New Bookings "
-									smooth={true}
-									duration={500}
-									onClick={() => scrollToSection('New Bookings ')}
-								>
-									New Bookings 
-								</ScrollLink>
+								<a
+										href="https://cullitons.com/Cullitons-Online-Booking.html"
+										target="_blank"
+										rel="noreferrer"
+									>
+										New Bookings
+									</a>
 							</li>
 							<li
 								className={`  xl:text-[18px] lg:text-[14px] text-[14px] cursor-pointer select-none capitalize`}
 							>
-								<ScrollLink
-									to="Manage Booking"
-									smooth={true}
-									duration={500}
-									onClick={() => scrollToSection('Manage Booking')}
-								>
-									Manage Booking
-								</ScrollLink>
+									<a
+										href="https://cullitons.limoconnect247.net/managebooking/#login"
+										target="_blank"
+										rel="noreferrer"
+									>
+										Manage booking
+									</a>
 							</li>
 							<li
 								className={`  xl:text-[18px] lg:text-[14px] text-[14px] cursor-pointer select-none capitalize`}

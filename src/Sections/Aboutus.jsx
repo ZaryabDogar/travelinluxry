@@ -47,7 +47,7 @@ Welcome to a century of excellence. Welcome to Cullitons Limousine.
 				<div className="">
 				<div className="fixed sm:top-5 top-10 left-0 w-full h-full flex items-center justify-center bg-black bg-[rgba(0,0,0,0.7)] z-10 px-5 overflow-hidden mb-12" onClick={closeModal}>
 					
-				</div><div className="bg-[#000000] text-white sm:p-8 p-2 xl:max-w-4xl md:max-w-3xl w-[90%]  h-[80vh] text-center rounded-2xl select-none overflow-y-scroll no-scrollbar scrollbar-track z-30 fixed sm:top-24 top-10 left-[50%] -translate-x-[50%] ">
+				</div><div className="sm:mt-0 mt-12 bg-[#000000] text-white sm:p-8 p-2 xl:max-w-4xl md:max-w-3xl w-[90%]  h-[80vh] text-center rounded-2xl select-none overflow-y-scroll no-scrollbar scrollbar-track z-30 fixed sm:top-24 top-10 left-[50%] -translate-x-[50%] ">
 						<div className="">
 						<button
           className=" bg-[#CC405D] text-white px-2 py-2 rounded-full float-right "
